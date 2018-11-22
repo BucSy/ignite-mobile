@@ -29,6 +29,7 @@
     "standard": "^8.6.0"
   },
   "dependencies": {
+    "inquirer": "^6.2.0",
     "ramda": "^0.26.0"
   }
 }
