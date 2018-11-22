@@ -51,6 +51,7 @@ async function install (context) {
   // copy our App & Tests directories
     spinner.text = '▸ copying files and remove old files'
     spinner.start()
+  // choose lang support and copy files
     if(answer.lang) {
       filesystem.copy(`${PLUGIN_PATH}/boilerplate/src`, `${APP_PATH}/src`, {
         overwrite: true
@@ -63,6 +64,7 @@ async function install (context) {
     filesystem.copy(`${PLUGIN_PATH}/boilerplate/index.js`, `${APP_PATH}/index.js`, {
       overwrite: true
     })
+  // remove RN basic files
     filesystem.remove('__tests__')
     filesystem.remove('App.js')
     spinner.stop()
@@ -153,7 +155,7 @@ async function install (context) {
 
     // Wrap it up with our success message.
     print.info('')
-    print.info('🍽 Installed!')
+    print.info('🍽 Lets start!')
     print.info('')
     print.info(print.colors.yellow(`  cd ${name}`))
     print.info(print.colors.yellow('  react-native run-ios'))
