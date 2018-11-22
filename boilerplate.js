@@ -56,7 +56,9 @@ async function install (context) {
         overwrite: true
       })
     } else {
-      console.log('DoNothing');
+      filesystem.copy(`${PLUGIN_PATH}/boilerplate/srcWoLang`, `${APP_PATH}/src`, {
+        overwrite: true
+      })
     }
     filesystem.copy(`${PLUGIN_PATH}/boilerplate/index.js`, `${APP_PATH}/index.js`, {
       overwrite: true
