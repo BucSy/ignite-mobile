@@ -1,14 +1,12 @@
 import { IStore } from '../../IStore';
 import { createSelector } from 'reselect';
 
-const locale = (state: IStore) => state.app.language;
+const textInput = (state: IStore) => state.app.textFromInputBox;
 
-export const getLocale = createSelector([locale], (locale) => {
-    if(locale === 'en') {
-        return 'angol';
-    } else if (locale === ''){
-        return 'alapertelmezett';
-    } else if(locale === 'hu') {
-        return 'magyar';
+export const getText = createSelector([textInput], (textInput) => {
+    if(textInput === 'basictext') {
+        return 'basic';
+    } else {
+        return 'not_basictext';
     }
 });

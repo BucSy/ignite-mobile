@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { actions } from '../../logic/saga/app/appActions';
 import { IApp } from '../../logic/redux/app/appReducer'
 import { IStore } from '../../logic/IStore';
-import { getLocale } from '../../logic/redux/app/appSelector';
+import { getText } from '../../logic/redux/app/appSelector';
 import styles from './styles';
 import { NavigationInjectedProps } from 'react-navigation';
 
@@ -59,6 +59,7 @@ class App extends Component<Props & NavigationInjectedProps> {
 const mapStateToProps = (state: IStore, props: Props) => {
   return {
     app: state.app,
+    basic: getText(state),
     ...props
   }
 };

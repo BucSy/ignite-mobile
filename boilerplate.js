@@ -64,6 +64,12 @@ async function install (context) {
     filesystem.copy(`${PLUGIN_PATH}/boilerplate/index.js`, `${APP_PATH}/index.js`, {
       overwrite: true
     })
+    filesystem.copy(`${PLUGIN_PATH}/boilerplate/jest.config.js`, `${APP_PATH}/jest.config.js`, {
+      overwrite: true
+    })
+    filesystem.copy(`${PLUGIN_PATH}/boilerplate/tsconfig.json`, `${APP_PATH}/tsconfig.json`, {
+      overwrite: true
+    })
   // remove RN basic files
     filesystem.remove('__tests__')
     filesystem.remove('App.js')

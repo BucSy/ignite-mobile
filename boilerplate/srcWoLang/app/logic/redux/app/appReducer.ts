@@ -1,4 +1,4 @@
-import { CHANGE_LANGUAGE, TEXT_TO_STORE } from '../../saga/app/appActions';
+import { TEXT_TO_STORE } from '../../saga/app/appActions';
 import produce from 'immer';
 
 export interface IApp {
