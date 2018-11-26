@@ -1,0 +1,7 @@
+import { createSelector } from 'reselect';
+
+const example = (state: any) => state.example;
+
+export const <%= pascalCase(props.name) %> = createSelector([example], (example) => {
+    // do something with the data
+});
