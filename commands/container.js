@@ -36,7 +36,7 @@ module.exports = async function (context) {
     // into ./${name}.js.
     jobs = [{
       template: 'container.js.ejs',
-      target: `${name}.ts`
+      target: `${name}.tsx`
     }]
   
     // make the templates and pass in props with the third argument here
