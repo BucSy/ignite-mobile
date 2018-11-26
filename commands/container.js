@@ -1,4 +1,4 @@
-// Generates a "selector".
+// Generates a "container".
 
 module.exports = async function (context) {
     // Learn more about context: https://infinitered.github.io/gluegun/#/context-api.md
@@ -8,7 +8,7 @@ module.exports = async function (context) {
   
     // validation
     if (isBlank(parameters.first)) {
-      print.info(`ignite generate selector <name>\n`)
+      print.info(`ignite generate container <name>\n`)
       print.info('A name is required.')
       return
     }
@@ -32,10 +32,10 @@ module.exports = async function (context) {
       props = { name }
     }
   
-    // Copies the `selector.js.ejs` in your plugin's templates folder
+    // Copies the `container.js.ejs` in your plugin's templates folder
     // into ./${name}.js.
     jobs = [{
-      template: 'selector.js.ejs',
+      template: 'container.js.ejs',
       target: `${name}.ts`
     }]
   

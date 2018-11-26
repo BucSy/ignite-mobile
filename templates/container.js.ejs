@@ -1,0 +1,40 @@
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
+import * as Redux from 'redux';
+
+interface IDispatchedProps {
+
+}
+
+type IProps = IDispatchedProps & {
+
+};
+
+// TODO: Specify the type of the returning data from the following functions.
+
+const mapDispatchToProps = (dispatch: any): IDispatchedProps => {
+  return Redux.bindActionCreators({
+
+  }, dispatch);
+};
+
+const mapStateToProps = (state: any, props: IDispatchedProps): IProps => {
+  return {};
+};
+
+// TODO: Specify the state type of this component (change any)
+
+class <%= props.name %> extends
+  React.Component<IProps, any> {
+
+  public render() {
+    return (
+      <View>
+        <Text>Hello <%= props.name %></Text>
+      </View>
+    );
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(<%= props.name %>);
