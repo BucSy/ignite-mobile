@@ -1,0 +1,7 @@
+import { action } from 'typesafe-actions';
+
+export const EXAMPLE_ACTION_TYPE: string = 'EXAMPLE_ACTION_TYPE';
+
+export const <%= pascalCase(props.name) %> = {
+    exampleAction: (payload: any) => action(EXAMPLE_ACTION_TYPE, payload ),
+}

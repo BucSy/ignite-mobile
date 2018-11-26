@@ -1,0 +1,13 @@
+import produce from 'immer';
+
+const initalizeState: any = {
+    example: 'some_string',
+};
+
+export default (state = initalizeState, action: {type: string, payload: string}) => 
+    produce(state, draft => {
+        switch(action.type) {
+            default:
+                return state;
+        }
+});
