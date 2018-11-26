@@ -13,7 +13,7 @@ const add = async function (context) {
   const { ignite, filesystem } = context
 
   // install an NPM module and link it
-  await ignite.addModule(NPM_MODULE_NAME, { link: true, version: NPM_MODULE_VERSION })
+  // await ignite.addModule(NPM_MODULE_NAME, { link: true, version: NPM_MODULE_VERSION })
 
   
 
